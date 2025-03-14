@@ -19,11 +19,11 @@ const Testimonials = () => {
       <h2 className="text-center text-success mb-4">Stories from Our Community</h2>
       <div className="row">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="col-md-6 mb-4">
-            <div className="card">
-              <div className="card-body">
-                <p className="card-text">{testimonial.content}</p>
-                <h5 className="card-title">{testimonial.author}</h5>
+          <div key={index} className="col-md-6 mb-4 d-flex">
+            <div className="card h-100 w-100 d-flex flex-column">
+              <div className="card-body d-flex flex-column">
+                <p className="card-text flex-grow-1">{testimonial.content}</p>
+                <h5 className="card-title mt-3">{testimonial.author}</h5>
                 <p className="card-subtitle text-muted">{testimonial.role}</p>
               </div>
             </div>

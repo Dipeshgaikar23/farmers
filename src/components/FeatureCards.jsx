@@ -23,11 +23,11 @@ const FeatureCards = () => {
     <section className="container my-5">
       <div className="row">
         {features.map((feature, index) => (
-          <div key={index} className="col-md-4 mb-4">
-            <div className="card text-center">
-              <div className="card-body">
+          <div key={index} className="col-md-4 mb-4 d-flex">
+            <div className="card text-center h-100 w-100 d-flex flex-column">
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title text-success">{feature.title}</h5>
-                <p className="card-text">{feature.description}</p>
+                <p className="card-text flex-grow-1">{feature.description}</p>
               </div>
             </div>
           </div>

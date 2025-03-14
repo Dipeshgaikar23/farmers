@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import FeatureCards from './components/FeatureCards';
@@ -12,23 +12,29 @@ import Checkout from './components/Checkout'; // Import the Checkout component
 
 const App = () => {
   return (
-    <Router>
+    <>
       <ThreeJSBackground />
       <Header />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <FeatureCards />
-            <HowItWorks />
-            <Testimonials />
-            <CTASection />
-          </>
-        } />
+        {/* Main Landing Page with Footer */}
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Hero />
+              <FeatureCards />
+              <HowItWorks />
+              <Testimonials />
+              <CTASection />
+              <Footer /> {/* Footer is included here */}
+            </>
+          } 
+        />
+
+        {/* Checkout Page WITHOUT Footer */}
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
-      <Footer />
-    </Router>
+    </>
   );
 };
 
