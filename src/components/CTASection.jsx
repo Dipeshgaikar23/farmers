@@ -1,13 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CTASection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-success text-white text-center py-5">
       <h2 className="display-4">Join Our Growing Community</h2>
       <p className="lead">Whether you're a natural farmer looking for fair markets or a consumer seeking authentic natural products, HarvestTrace connects you to a transparent food ecosystem.</p>
       <div className="mt-4">
-        <a href="#" className="btn btn-light me-2">Join as Farmer</a>
-        <a href="#" className="btn btn-outline-light">Shop as Consumer</a>
+        <button className="btn btn-light me-2" onClick={() => navigate('/checkout')}>Join as Farmer</button>
+        <button className="btn btn-outline-light">Shop as Consumer</button>
       </div>
     </section>
   );
