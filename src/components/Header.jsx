@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,16 +15,17 @@ const Header = () => {
       </div>
       <nav>
         <ul className="nav">
-          <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
+          <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
           <li className="nav-item"><a href="#how-it-works" className="nav-link">How It Works</a></li>
           <li className="nav-item"><a href="#farmers" className="nav-link">For Farmers</a></li>
           <li className="nav-item"><a href="#consumers" className="nav-link">For Consumers</a></li>
           <li className="nav-item"><a href="#about" className="nav-link">About Us</a></li>
+          <li className="nav-item"><Link to="/marketplace" className="nav-link">Marketplace</Link></li> {/* ✅ Added Marketplace Link */}
         </ul>
       </nav>
       <div>
-        <a href="#" className="btn btn-outline-success me-2">Log In</a>
-        <a href="#" className="btn btn-success">Sign Up</a>
+        <Link to="/login" className="btn btn-outline-success me-2">Log In</Link>
+        <Link to="/register" className="btn btn-success">Sign Up</Link>
       </div>
     </header>
   );
