@@ -26,7 +26,7 @@ const FeatureCards = () => {
           <div key={index} className="col-md-4 mb-4 d-flex">
             <div className="card text-center h-100 w-100 d-flex flex-column">
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title text-success">{feature.title}</h5>
+                <h5 className="card-title" style={{color:"#23B714"}}>{feature.title}</h5>
                 <p className="card-text flex-grow-1">{feature.description}</p>
               </div>
             </div>

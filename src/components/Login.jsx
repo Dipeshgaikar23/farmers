@@ -21,8 +21,18 @@ const Login = () => {
     <div className="container auth-container">
       <h2>Login</h2>
       <div className="toggle-buttons">
-        <button className={`btn ${loginMethod === 'password' ? 'btn-success' : 'btn-light'}`} onClick={() => setLoginMethod('password')}>Username & Password</button>
-        <button className={`btn ${loginMethod === 'otp' ? 'btn-success' : 'btn-light'}`} onClick={() => setLoginMethod('otp')}>OTP</button>
+        <button 
+          className={`btn ${loginMethod === 'password' ? 'custom-green-btn' : 'btn-light'}`} 
+          onClick={() => setLoginMethod('password')}
+        >
+          Username & Password
+        </button>
+        <button 
+          className={`btn ${loginMethod === 'otp' ? 'custom-green-btn' : 'btn-light'}`} 
+          onClick={() => setLoginMethod('otp')}
+        >
+          OTP
+        </button>
       </div>
 
       <form onSubmit={handleSubmit} className="form">
@@ -43,16 +53,51 @@ const Login = () => {
               <label>Phone Number</label>
               <input type="tel" name="phone" className="form-control" placeholder="Enter your phone number" required onChange={handleChange} />
             </div>
-            <button type="button" className="btn btn-warning w-100">Send OTP</button>
+            <button type="button" className="btn btn-warning w-100 otp-btn">Send OTP</button>
             <div className="form-group">
               <label>OTP</label>
               <input type="text" name="otp" className="form-control" placeholder="Enter OTP" required onChange={handleChange} />
             </div>
           </>
         )}
-        <button type="submit" className="btn btn-success w-100">Login</button>
+        <button type="submit" className="btn custom-green-btn w-100 login-btn">Login</button>
         <p className="login-text">Don't have an account? <a href="/register">Register here</a></p>
       </form>
+
+      {/* Hover Effect Styles */}
+      <style>
+        {`
+          .custom-green-btn {
+            background-color: #0E9900 !important; 
+            color: white !important;
+            border: none;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+          }
+          
+          .custom-green-btn:hover {
+            background-color: #1e990f !important; /* Darker green */
+            transform: scale(1.05);
+          }
+
+          .otp-btn {
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+          }
+
+          .otp-btn:hover {
+            background-color: #e0a800 !important; /* Darker warning color */
+            transform: scale(1.05);
+          }
+
+          .login-btn {
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+          }
+
+          .login-btn:hover {
+            background-color: #1e990f !important; /* Darker green */
+            transform: scale(1.05);
+          }
+        `}
+      </style>
     </div>
   );
 };

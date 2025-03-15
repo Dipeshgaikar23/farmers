@@ -55,13 +55,28 @@ const Checkout = () => {
             </div>
 
             <div className="text-center mt-4">
-              <button className="btn btn-success btn-lg px-4 rounded-pill">
+              <button className="btn btn-lg px-4 rounded-pill text-white payment-btn">
                 Proceed to Payment
               </button>
             </div>
           </>
         )}
       </div>
+
+      {/* Hover Effect Styles */}
+      <style>
+        {`
+          .payment-btn {
+            background-color: #0E9900 !important; 
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+          }
+
+          .payment-btn:hover {
+            background-color: #0c7f00 !important; /* Darker Green */
+            transform: scale(1.05); /* Slight scale effect */
+          }
+        `}
+      </style>
     </div>
   );
 };

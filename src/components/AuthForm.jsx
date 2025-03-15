@@ -73,7 +73,7 @@ const AuthForm = () => {
           <input type="password" name="password" className="form-control" placeholder="Enter password" required onChange={handleChange} />
         </div>
 
-        <button type="submit" className="btn btn-success w-100">Register</button>
+        <button type="submit" className="btn w-100 text-white" style={{background:"#0E9900"}}>Register</button>
         <p className="login-text">Already have an account? <a href="/login">Login here</a></p>
       </form>
     </div>

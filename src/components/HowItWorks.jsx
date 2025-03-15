@@ -10,14 +10,14 @@ const HowItWorks = () => {
 
   return (
     <section className="container my-5" id="how-it-works">
-      <h2 className="text-center text-success mb-4">How HarvestTrace Works</h2>
+      <h2 className="text-center mb-4" style={{color:"#0E9900"}}>How HarvestTrace Works</h2>
       <div className="row">
         {steps.map((step) => (
           <div key={step.number} className="col-md-3 text-center mb-4">
-            <div className="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style={{ width: '80px', height: '80px', margin: '0 auto' }}>
+            <div className=" text-white rounded-circle d-flex align-items-center justify-content-center" style={{ width: '80px', height: '80px', margin: '0 auto', background:"#0E9900" }}>
               <h3>{step.number}</h3>
             </div>
-            <h5 className="mt-2 text-success">{step.title}</h5>
+            <h5 className="mt-2" style={{color:"#0E9900"}}>{step.title}</h5>
             <p>{step.description}</p>
           </div>
         ))}

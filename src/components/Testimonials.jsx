@@ -16,7 +16,7 @@ const Testimonials = () => {
 
   return (
     <section className="container my-5">
-      <h2 className="text-center text-success mb-4">Stories from Our Community</h2>
+      <h2 className="text-center mb-4" style={{color:"#0E9900"}}>Stories from Our Community</h2>
       <div className="row">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="col-md-6 mb-4 d-flex">

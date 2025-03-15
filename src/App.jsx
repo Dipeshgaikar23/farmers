@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/register" element={<AuthForm />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/marketplace" element={<FarmMarketplace />} /> {/* ✅ Added Marketplace Route */}
+        <Route path="/marketplace" element={<FarmMarketplace />} />
       </Routes>
     </>
   );

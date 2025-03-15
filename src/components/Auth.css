@@ -26,7 +26,7 @@
 }
 
 .toggle-buttons .btn-success {
-    background: green;
+    background: #0E9900;
     color: white;
 }
 
@@ -64,7 +64,7 @@
 
 /* Submit Button */
 .btn-success {
-    background: green;
+    background: #0E9900;
     font-size: 16px;
     font-weight: bold;
     transition: 0.3s ease-in-out;
@@ -80,7 +80,7 @@
 }
 
 .login-text a {
-    color: green;
+    color: #0E9900;
     font-weight: bold;
     text-decoration: none;
 }
